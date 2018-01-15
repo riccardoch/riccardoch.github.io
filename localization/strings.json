@@ -1,0 +1,236 @@
+{
+    "en": {
+        "app": {
+            "name": "iFeel Smart"
+        },
+        "alert": {
+            "error": "Error",
+            "connected": "You're connected to the system!",
+            "confirm": "Confirm",
+            "cancel": "Cancel",
+            "delete": "Delete",
+            "data-future": "You can't yet see the future! But we're working on it!",
+            "update": "Update",
+            "read-notifications": "Read notifications"
+        },
+        "log-in": {
+            "button-title": "Log in",
+            "info-title": "Do you have an account? Click <i>Log in</i> button, otherwise click <i>Sign Up</i>",
+            "info-desc": "Creating an account you'll be able to sync your list of boards, save sensors data on a database, receive push notifications when something happens, etc.",
+            "popup-title": "Please log in"
+        },
+        "sign-up": {
+            "button-title": "Sign up",
+            "popup-title": "Please sign up"
+        },
+        "log-out": "Log out",
+        "connected-as": "Connected as",
+        "last-sync": "Last sync",
+        "ip-conn": {
+            "info-title": "Don't you like to sign up?",
+            "info-desc": "If you don't want to sign up, you can connect directly to the board through its ip.",
+            "button-title": "Connect",
+            "ip-address": "IP Address"
+        },
+        "info": {
+            "lights-on": "Lights on:",
+            "loads-on": "Loads on",
+            "temperature": "Temperature",
+            "humidity": "Humidity",
+            "click-room": "Click to enter the room",
+            "config-updated": "The system configuration has been updated",
+            "new-notifications": "There are new notifications to read!",
+            "delete-all-notifications": "Delete all notifications",
+            "unread-notifications": "Number of unread notifications",
+            "no-notifications": "There are no unread notifications",
+            "last-update": "Last update"
+        },
+        "security-system": {
+            "state": "Security System state",
+            "title": "Security System",
+            "activated": "Activated",
+            "deactivated": "Deactivated",
+            "activate": "Activate",
+            "deactivate": "Deactivate",
+            "disabled": "Disabled",
+            "change-pw": "Change Password",
+            "old-pw": "Old Password",
+            "new-pw": "New Password",
+            "confirm-new-pw": "Confirm new Password",
+            "success": "Security system successfully %s!",
+            "pw-success-changed": "Password successfully changed!",
+            "wrong-pw": "Wrong Password!",
+            "pw-not-match": "The passwords don't match!",
+            "info": "The fields cannot be empty!<br>The password has to be at least 5 characters long"
+        },
+        "threshold": {
+            "thermostat": "Thermostat",
+            "humidostat": "Humidostat",
+            "set": "Threshold Set",
+            "value": "Value",
+            "state": "State",
+            "on": "On",
+            "off": "Off",
+            "hot": "Hot",
+            "cold": "Cold",
+            "humidify": "Humidify",
+            "dehumidify": "Dehumidify",
+            "auto-mode": "Auto Mode",
+            "auto": "Auto",
+            "manual": "Manual"
+        },
+
+        "linechart": {
+            "see-table": "See Table",
+            "previous": "Previous",
+            "next": "Next",
+            "average": "Average",
+            "variance": "Variance",
+            "max": "Max",
+            "min": "Min",
+            "columns": "Columns",
+            "date": "Date"
+        },
+
+        "refresh": "Refresh",
+        "webcams": "Webcams",
+        "output": "Output",
+        "light": "Light",
+        "load": "Load",
+        "input": "Input",
+        "sensor": "Sensor",
+        "virtual-input": "Virtual Input",
+        "webcam": "Webcam",
+        "outputs": "Outputs",
+        "lights": "Lights",
+        "loads": "Loads",
+        "inputs": "Inputs",
+        "sensors": "Sensors",
+        "virtual-inputs": "Virtual Inputs",
+        "notifications": "Notifications",
+        "edit": {
+            "config": "Edit configuration"
+        },
+        "search": {
+            "boards": "Search boards",
+            "items": "Search"
+        }
+    },
+    "it": {
+        "app": {
+            "name": "iFeel Smart"
+        },
+        "alert": {
+            "error": "Errore",
+            "connected": "Sei connesso al sistema!",
+            "confirm": "Conferma",
+            "cancel": "Annulla",
+            "delete": "Elimina",
+            "data-future": "Non puoi ancora vedere il futuro! Ma ci stiamo lavorando!",
+            "update": "Aggiornamento",
+            "read-notifications": "Leggi notifiche"
+        },
+        "log-in": {
+            "button-title": "Accedi",
+            "info-title": "Hai un account? Clicca <i>Accedi</i>, altrimenti clicca <i>Registrati</i>",
+            "info-desc": "Creando un account potrai sincronizzare le schede tra i tuoi dispositivi, salvare i dati dei sensori su un database, ricevere le notifiche quando succede qualcosa, ecc.",
+            "popup-title": "Dati di accesso"
+        },
+        "sign-up": {
+            "button-title": "Registrati",
+            "popup-title": "Registrazione"
+        },
+        "log-out": "Esci",
+        "connected-as": "Connesso come",
+        "last-sync": "Ultima sinc.",
+        "ip-conn": {
+            "info-title": "<h3>Non vuoi registrare un account?</h3>",
+            "info-desc": "Se non desideri registrarti, puoi connetterti alla scheda inserendo il suo indirizzo ip.",
+            "button-title": "Connetti",
+            "ip-address": "Indirizzo IP"
+        },
+        "info": {
+            "lights-on": "Luci accese",
+            "loads-on": "Carichi accesi",
+            "temperature": "Temperatura",
+            "humidity": "Umidità",
+            "click-room": "Clicca per entrare nella stanza",
+            "config-updated": "La configurazione dell'impianto è stata aggiornata",
+            "new-notifications": "Ci sono nuove notifiche da leggere!",
+            "delete-all-notifications": "Elimina tutte le notifiche",
+            "unread-notifications": "Numero di notifiche non lette",
+            "no-notifications": "Non ci sono notifiche da leggere",
+            "last-update": "Ultimo aggiornamento"
+        },
+        "security-system": {
+            "state": "Stato Allarme",
+            "title": "Allarme",
+            "activate": "Attiva",
+            "deactivate": "Disattiva",
+            "activated": "Attivato",
+            "deactivated": "Disattivato",
+            "disabled": "Non abilitato",
+            "change-pw": "Cambia Password",
+            "old-pw": "Vecchia Password",
+            "new-pw": "Nuova Password",
+            "confirm-new-pw": "Conferma nuova Password",
+            "success": "Sistema di allarme %s con successo!",
+            "pw-success-changed": "Password cambiata con successo!",
+            "wrong-pw": "Password errata!",
+            "pw-not-match": "Le password non coincidono!",
+            "info": "I campi non possono essere vuoti!<br>Le password devono contenere almeno 5 caratteri"
+        },
+        "threshold": {
+            "thermostat": "Termostato",
+            "humidostat": "Umidostato",
+            "set": "Impostazione soglia",
+            "value": "Valore",
+            "state": "Stato",
+            "on": "On",
+            "off": "Off",
+            "hot": "Caldo",
+            "cold": "Freddo",
+            "humidify": "Umidifica",
+            "dehumidify": "Deumidifica",
+            "auto-mode": "Gestione Automatica",
+            "auto": "Auto",
+            "manual": "Manuale"
+        },
+
+        "linechart": {
+            "see-table": "Vedi Tabella",
+            "previous": "Precedente",
+            "next": "Successivo",
+            "average": "Valore Medio",
+            "variance": "Varianza",
+            "max": "Max",
+            "min": "Min",
+            "columns": "Colonne",
+            "date": "Data"
+        },
+
+        "refresh": "Aggiorna",
+        "webcams": "Webcam",
+        "output": "Output",
+        "light": "Luce",
+        "load": "Carico",
+        "input": "Input",
+        "sensor": "Sensore",
+        "virtual-input": "Input Virtuale",
+        "webcam": "Webcam",
+        "outputs": "Output",
+        "lights": "Luci",
+        "loads": "Carichi",
+        "inputs": "Input",
+        "sensors": "Sensori",
+        "virtual-inputs": "Input Virtuali",
+        "notifications": "Notifiche",
+        "edit": {
+            "config": "Modifica configurazione"
+        },
+        "search": {
+            "boards": "Cerca schede",
+            "items": "Cerca"
+        }
+    }
+}
