@@ -1,0 +1,115 @@
+<!doctype html>
+<head xmlns="http://www.w3.org/1999/html">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+
+    <!-- Parse Server -->
+    <script src="../customClasses/parse_server.js"></script>
+    <script type="text/javascript" src="../customClasses/parse-latest.js"></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/favicon.png">
+
+    <!-- JBox -->
+    <script src="../JBox/jquery-1.11.1.min.js"></script>
+    <script src="../JBox/jBox.min.js"></script>
+    <link href="../JBox/jBox.css" rel="stylesheet">
+
+    <!-- Title -->
+    <title>Smartface</title>
+
+    <!-- JQuery Mobile -->
+    <link rel="stylesheet" href="../css/jquery1.4.5.css"/>
+    <script src="../customClasses/jquery-2.1.3.min.js"></script>
+    <script src="../customClasses/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/jqm-demos.css"/>
+    <link rel="stylesheet" href="../css/main.css"/>
+
+    <!-- Main Scripts -->
+    <script src="../customClasses/smartUtils.js"></script>
+    <script src="../customClasses/parseFunctions.js"></script>
+    <script src="../script/login.js"></script>
+
+</head>
+
+
+<style>
+    .ui-page .ui-header {
+        background: #ff9704 !important;
+    }
+</style>
+
+
+<body onload="onLoad()">
+<div class="custom-page" data-role="page" id="index">
+
+    <!-- HEADER -->
+    <div class="custom-header" data-role="header" data-position="fixed">
+        <div><h3 id="header-title" style="text-shadow:none; color:#ffffff; text-align: center;">iFeel Smart</h3></div>
+    </div>
+
+    <div data-role="content">
+
+        <h3 id="login_title">Do you have an account? Click <i>Log in</i> button, otherwise click <i>Sign Up</i></h3>
+        <p id="login_desc">Creating an account you'll be able to sync your list of boards, save sensors data on a database, receive push notifications when something happens, etc.</p>
+
+        <!-- LOGIN pop up -->
+        <div data-overlay-theme="b" data-role="popup" id="popUpLogin" data-theme="a" class="ui-corner-all"><a href="#" data-rel="back"
+                                                                                       class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+            <form class="medium-popup">
+                <div style="padding:10px 20px;"><h3 id="login-popup-title">Please log in</h3><label for="username"
+                                                                              class="ui-hidden-accessible">Username:</label><input
+                    type="text" name="user" id="username" value="" placeholder="username" data-theme="a"><label
+                    for="password" class="ui-hidden-accessible">Password:</label><input type="password" name="pass"
+                                                                                        id="password" value=""
+                                                                                        placeholder="password"
+                                                                                        data-theme="a">
+                    <button type="button" id="login_btn" onclick="logIn()"
+                            class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Log in
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- SIGNUP pop up -->
+        <div data-overlay-theme="b" data-role="popup" id="popUpSignUp" data-theme="a" class="ui-corner-all"><a href="#" data-rel="back"
+                                                                                        class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+            <form class="medium-popup">
+                <div style="padding:10px 20px;"><h3 id="signup-popup-title">Please sign up</h3><label for="username_signup"
+                                                                              class="ui-hidden-accessible">Username:</label><input
+                    type="text" name="user" id="username_signup" value="" placeholder="username" data-theme="a"><label
+                    for="password_signup" class="ui-hidden-accessible">Password:</label><input type="password"
+                                                                                               name="pass"
+                                                                                               id="password_signup"
+                                                                                               value=""
+                                                                                               placeholder="password"
+                                                                                               data-theme="a"><label
+                    for="email_signup" class="ui-hidden-accessible">Email:</label><input type="text" name="user"
+                                                                                         id="email_signup" value=""
+                                                                                         placeholder="email"
+                                                                                         data-theme="a">
+                    <button type="button" id="signup_btn" onclick="signUp()"
+                            class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Sign up
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- LOG IN and SIGN UP BUTTON -->
+        <fieldset style="margin-bottom:5%;" class="ui-grid-a">
+            <div class="ui-block-a">
+                <input id="login_btn1" type="button" style="margin-right:2%" onclick="$('#popUpLogin').popup('open')" value="Log In">
+            </div>
+            <div class="ui-block-b">
+                <input id="signup_btn1" type="button" style="margin-left:2%" data-theme="b" onclick="$('#popUpSignUp').popup('open')"
+                       value="Sign Up">
+            </div>
+        </fieldset>
+    </div>
+
+</div>
+
+</body>
+

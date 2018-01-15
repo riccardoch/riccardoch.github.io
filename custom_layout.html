@@ -1,0 +1,138 @@
+<!doctype html>
+<head xmlns="http://www.w3.org/1999/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Parse Server -->
+    <script src="../customClasses/parse_server.js"></script>
+    <script type="text/javascript" src="../customClasses/parse-latest.js"></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/favicon.png">
+
+    <!-- JBox -->
+    <script src="../JBox/jquery-1.11.1.min.js"></script>
+    <script src="../JBox/jBox.min.js"></script>
+    <link href="../JBox/jBox.css" rel="stylesheet">
+
+    <!-- JQuery Mobile -->
+    <link rel="stylesheet" href="../css/jquery1.4.5.css"/>
+    <script src="../customClasses/jquery-2.1.3.min.js"></script>
+    <script src="../customClasses/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/jqm-demos.css"/>
+    <link rel="stylesheet" href="../css/main.css"/>
+
+    <!-- Main Scripts -->
+    <script src="../customClasses/smartUtils.js"></script>
+    <script src="../customClasses/parseFunctions.js"></script>
+    <script src="../script/paho-mqtt.js"></script>
+    <script src="../script/mqtt_utils.js"></script>
+
+    <script id="panel-init">
+        $(function () {
+            $("body>[data-role='panel']").panel();
+        });
+    </script>
+</head>
+
+<style>
+    h3, h4 {
+        text-align: center;
+    }
+
+    span {
+        font-weight: bold;
+    }
+</style>
+
+
+<body onload="" style="height: 100%;overflow: hidden">
+<div class="jqm-demos custom-page" data-role="page" id="board_detail">
+
+    <div data-role="panel" id="left-panel" data-position="left" data-display="overlay">
+    </div><!-- /panel -->
+
+    <!-- Header -->
+    <div class="custom-header" id="header" data-role="header" data-position="fixed">
+        <h1 style="text-shadow:none; color:#ffffff">Smartface</h1>
+        <!-- Left Panel -->
+        <a onclick="$('#left-panel').panel('open')"
+           class="ui-btn ui-corner-all ui-nodisc-icon ui-icon-back ui-btn-icon-notext ui-icon-bars ui-btn-white">Menu</a>
+    </div>
+
+    <div id="custom_layout"></div>
+
+    <!-- SCRIPTS -->
+    <script>
+
+        var lang = getLanguage();
+        console.log("Language: " + lang);
+        if (lang != "en" && lang != "it") {
+            lang = "en";
+        }
+
+        var setUI = function () {
+
+            $('#items_list_container').append('<ul id="items_list" data-split-icon="gear" data-role="listview" data-filter="true" data-filter-placeholder="' + localization[lang]['search']['items'] + '" data-inset="true"></ul>');
+
+            var saveData = JSON.parse(localStorage.saveData || null) || {};
+
+            var username = saveData.username;
+
+            // Set Custom Layout
+            if (saveData.webInterface != null) {
+                document.getElementById("custom_layout").innerHTML = saveData.webInterface;
+            }
+            // Set Custom Script
+            if (saveData.webInterfaceScript != null) {
+                var s = document.createElement('script');
+                s.innerHTML = saveData.webInterfaceScript;
+                document.body.appendChild(s);
+            }
+
+            // Left Panel
+            var content =
+                '<ul data-split-icon="gear" style="margin: -1.44em -1em 1em; padding: .46857em 0 0;" data-role="listview" class="ui-alt-icon ui-nodisc-icon">' +
+                '<li id="connected-user" data-role="list-divider">' + localization[lang]['connected-as'] + '<i> ' + username + '</i>' + '</li>' +
+                //'<li><a onclick="setTab(id)" id="notifications" class="ui-icon-mail" data-icon="mail">' + localization[lang]['notifications'] + '</a></li>' +
+                '<li><a onclick="logOut()" id="logout-btn" class="ui-icon-user" data-icon="lock">' + localization[lang]['log-out'] + '</a></li>' +
+                '<li></li>' +
+                '<li></li>' +
+                '<li><a onclick="getUserData()" id="refresh-btn" class="ui-icon-refresh" data-icon="refresh">' + localization[lang]['refresh'] + '</a></li>' +
+                '</ul>';
+            $('#left-panel').append(content);
+        };
+
+        var getLocalizationFromStorage = function () {
+            var json = undefined;
+            try {
+                json = JSON.parse(localStorage.localization);
+            }
+            catch (e) {
+            }
+            return json;
+        };
+
+        var localization = getLocalizationFromStorage();
+        if (localization == undefined) {
+            var localizeStrings = function () {
+
+                $.getJSON('../localization/strings.json', function (json) {
+                    console.log(json);
+                    localization = json;
+
+                    localStorage.localization = JSON.stringify(localization);
+                    setUI();
+                });
+
+            };
+        }
+        else {
+            setUI();
+        }
+    </script>
+
+</div>
+</body>
+
