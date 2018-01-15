@@ -1,7 +1,7 @@
 {
     "en": {
         "app": {
-            "name": "iFeel Smart"
+            "name": "Smartface"
         },
         "alert": {
             "error": "Error",
@@ -118,7 +118,7 @@
     },
     "it": {
         "app": {
-            "name": "iFeel Smart"
+            "name": "Smartface"
         },
         "alert": {
             "error": "Errore",
