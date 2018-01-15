@@ -115,7 +115,7 @@
         var localization = getLocalizationFromStorage();
         if (localization == undefined) {
             var localizeStrings = function () {
-
+                console.log("Loading strings...");
                 $.getJSON('/localization/strings.json', function (json) {
                     console.log(json);
                     localization = json;
