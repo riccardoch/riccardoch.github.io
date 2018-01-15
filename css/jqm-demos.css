@@ -1,0 +1,55 @@
+
+@media (min-width: 60em) {
+	.jqm-demos .jqm-navmenu-panel {
+		visibility: visible;
+		position: relative;
+		left: 0;
+		clip: initial;
+		float: left;
+		width: 100%;
+		background: none;
+		-webkit-transition: none !important;
+		-moz-transition: none !important;
+		transition: none !important;
+		-webkit-transform: none !important;
+		-moz-transform: none !important;
+		transform: none !important;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	}
+	.jqm-demos.jqm-panel-page .jqm-navmenu-panel {
+		display: none;
+	}
+	html .jqm-demos.jqm-panel-page .jqm-navmenu-panel.jqm-panel-page-nav {
+		display: block;
+	}
+
+    .jqm-panel-btn {
+        visibility: hidden;
+    }
+
+	.jqm-demos .jqm-navmenu-panel .ui-panel-inner {
+		margin-top: 0em;
+		margin-bottom: 0em;
+	}
+	.jqm-demos .jqm-content {
+		width: 60%;
+		padding-top: 2em;
+		padding-left: 3%;
+		padding-right: 3%;
+		float: right;
+	}
+    .jqm-demos .jqm-content.jqm-fullwidth {
+		width: auto;
+		padding-left: 15%;
+		padding-right: 15%;
+		float: none;
+	}
+
+}
+@media (min-width: 35em) {
+	.jqm-block-content {
+		min-height: 18em;
+	}
+}

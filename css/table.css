@@ -1,0 +1,118 @@
+/* These apply across all breakpoints because they are outside of a media query */
+/* Make the labels light gray all caps across the board */
+.sensor-table thead th,
+.sensor-table tbody th .ui-table-cell-label,
+.sensor-table tbody td .ui-table-cell-label {
+        text-transform: uppercase;
+        font-size: .7em;
+        color: rgba(0, 0, 0, 0.5);
+        font-weight: normal;
+}
+
+/* White bg, large blue text for rank and title */
+.sensor-table tbody th {
+        font-size: 1.2em;
+        background-color: #fff;
+        color: #eb8c03;
+        text-align: center;
+}
+
+/*  Add a bit of extra left padding for the title */
+.sensor-table tbody td.title {
+        padding-left: .8em;
+}
+
+/* Add strokes */
+.sensor-table thead th {
+        border-bottom: 1px solid #d6d6d6; /* non-RGBA fallback */
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.sensor-table tbody th,
+.sensor-table tbody td {
+        border-bottom: 1px solid #e6e6e6; /* non-RGBA fallback  */
+        border-bottom: 1px solid rgba(0, 0, 0, .05);
+}
+
+/*  Custom stacked styles for mobile sizes */
+/*  Use a max-width media query so we don't have to undo these styles */
+@media (max-width: 40em) {
+         /*  Negate the margin between sections */
+        .sensor-table tbody th {
+                margin-top: 0;
+                text-align: left;
+    }
+
+         /*  White bg, large blue text for rank and title */
+        .sensor-table tbody th,
+        .sensor-table tbody td.title {
+                display: block;
+                font-size: 1.2em;
+                line-height: 110%;
+                padding: .5em .5em;
+                background-color: #fff;
+                color: #eb8c03;
+                -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, .1);
+                -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, .1);
+                box-shadow: 0 1px 6px rgba(0, 0, 0, .1);
+    }
+
+         /*  Hide labels for rank and title */
+        .sensor-table tbody th .ui-table-cell-label,
+        .sensor-table tbody td.title .ui-table-cell-label {
+                display: none;
+    }
+
+         /*  Position the title next to the rank, pad to the left */
+        .sensor-table tbody td.title {
+                margin-top: -2.1em;
+                padding-left: 2.2em;
+                border-bottom: 1px solid rgba(0, 0, 0, .15);
+    }
+
+         /*  Make the data bold */
+        .sensor-table th,
+        .sensor-table td {
+                font-weight: bold;
+    }
+
+         /* Make the label elements a percentage width */
+        .sensor-table td .ui-table-cell-label,
+        .sensor-table th .ui-table-cell-label {
+                min-width: 20%;
+    }
+}
+
+/* Media query to show as a standard table at wider widths */
+@media ( min-width: 40em ) {
+         /* Show the table header rows */
+        .sensor-table td,
+        .sensor-table th,
+        .sensor-table tbody th,
+        .sensor-table tbody td,
+        .sensor-table thead td,
+        .sensor-table thead th {
+                display: table-cell;
+                margin: 0;
+    }
+
+         /* Hide the labels in each cell */
+        .sensor-table td .ui-table-cell-label,
+        .sensor-table th .ui-table-cell-label {
+                display: none;
+    }
+}
+
+/* Hack to make IE9 and WP7.5 treat cells like block level elements */
+/* Applied in a max-width media query up to the table layout breakpoint so we don't need to negate this */
+@media ( max-width: 40em ) {
+        .sensor-table td,
+        .sensor-table th {
+                width: 100%;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                float: left;
+                clear: left;
+    }
+}
