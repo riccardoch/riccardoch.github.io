@@ -74,8 +74,6 @@
 
         var setUI = function () {
 
-            $('#items_list_container').append('<ul id="items_list" data-split-icon="gear" data-role="listview" data-filter="true" data-filter-placeholder="' + localization[lang]['search']['items'] + '" data-inset="true"></ul>');
-
             var saveData = JSON.parse(localStorage.saveData || null) || {};
 
             var username = saveData.username;
