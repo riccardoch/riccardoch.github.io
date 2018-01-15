@@ -112,7 +112,23 @@
             return json;
         };
 
-        setUI();
+        var localization = getLocalizationFromStorage();
+        if (localization == undefined) {
+            var localizeStrings = function () {
+
+                $.getJSON('/localization/strings.json', function (json) {
+                    console.log(json);
+                    localization = json;
+
+                    localStorage.localization = JSON.stringify(localization);
+                    setUI();
+                });
+
+            };
+        }
+        else {
+            setUI();
+        }
     </script>
 
 </div>
