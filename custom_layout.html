@@ -115,14 +115,12 @@
         var localization = getLocalizationFromStorage();
         if (localization == undefined) {
             console.log("Loading strings...");
-            var localizeStrings = function () {
-                $.getJSON('/localization/strings.json', function (json) {
-                    console.log(json);
-                    localization = json;
-                    localStorage.localization = JSON.stringify(localization);
-                    setUI();
-                });
-            };
+            $.getJSON('/localization/strings.json', function (json) {
+                console.log(json);
+                localization = json;
+                localStorage.localization = JSON.stringify(localization);
+                setUI();
+            });
         }
         else {
             setUI();
