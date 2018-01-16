@@ -337,7 +337,7 @@ input.ui-slider-input {
 
 /* HEADER */
 .custom-page .custom-header {
-    background: #ff9704 !important;
+    background: #ef6c00 !important;
 }
 
 /* FOOTER BUTTONS */
@@ -359,14 +359,14 @@ input.ui-slider-input {
 
 /* WHITE BUTTON */
 .ui-btn-white {
-    background-color: #ff9704 !important;
+    background-color: #ef6c00 !important;
     border-color: #ffffff !important;
 }
 
 /* NAV BAR */
 /* Tabs color*/
 ul li a.ui-btn-active {
-    background-color: #ff9704 !important;
+    background-color: #ef6c00 !important;
 }
 
 /* CUSTOM PANEL */
